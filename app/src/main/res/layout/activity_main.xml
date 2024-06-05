@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvTerritoryTittle"
+        android:textSize="30dp"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:background="@color/black"
+        android:text="Territorios" />
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTerritoryTittle"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/etBuscarTerritorio"
+            android:hint="Buscar Territorio (ID)"
+            android:inputType="numberDecimal"
+            android:layout_margin="10dp"
+            android:textSize="20dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btBuscarTerritorio"
+            android:layout_margin="10dp"
+            android:text="Buscar"
+            android:textSize="20dp"/>
+    </LinearLayout>
+
+    <!-- TerritorioID -->
+    <TextView
+        android:id="@+id/tvTerritoryID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:layout_marginLeft="10dp"
+        android:text="Territory ID:"
+        android:textStyle="bold"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etTerritoryID"
+        android:layout_below="@id/tvTerritoryID"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:inputType="numberDecimal"
+        android:maxLength="50"
+        android:textSize="20dp"
+        android:hint="Ingrese el Nombre del Territorio"/>
+
+    <!-- Name -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvName"
+        android:layout_below="@id/etTerritoryID"
+        android:text="Name:"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etName"
+        android:layout_below="@id/tvName"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:maxLength="50"
+        android:textSize="20dp"
+        android:hint="Ingrese el Nombre del Territorio"/>
+
+
+    <!-- Country Region Code -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvRegionCode"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_below="@id/etName"
+        android:text="Country Region Code:"
+        android:layout_margin="10dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etCountryRegionCode"
+        android:layout_below="@id/tvRegionCode"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:maxLength="3"
+        android:textSize="20dp"
+        android:hint="Ingrese el Código de Región"/>
+
+    <!-- Group -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvGroup"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_below="@id/etCountryRegionCode"
+        android:layout_margin="10dp"
+        android:text="Group:"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etGroup"
+        android:layout_below="@id/tvGroup"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:maxLength="50"
+        android:textSize="20dp"
+        android:hint="Ingrese el Nombre del Grupo"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btSave"
+        android:layout_below="@id/etGroup"
+        android:text="Crear Territorio"
+        android:textSize="20dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:padding="20dp"/>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/llButtons"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_below="@id/btSave">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btUpdate"
+            android:text="Actualizar"
+            android:textSize="20dp"
+            android:padding="20dp"
+            android:layout_margin="10dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btDelete"
+            android:text="Eliminar"
+            android:textSize="20dp"
+            android:padding="20dp"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btPersonalTerritory"
+        android:layout_below="@id/llButtons"
+        android:padding="20dp"
+        android:text="IR AL PERSONAL"
+        android:textSize="20dp"/>
+
+    <!--
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/error"
+        android:layout_below="@id/llButtons"
+        android:text="error"/>
+    -->
+</RelativeLayout>
